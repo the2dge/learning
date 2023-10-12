@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.Navbar{
+	display: flex;
+	justify-content: space-between;
+	background: #101010;
+	color: white;
+	width: 100%;
+	height: 8vh;
+}
+.appIcon, .loginName{
+	text-align: center;
+	padding: 8px;
+    width: 10vw;
+	border-radius: 5px;
+	background: #1030c0;
+}
+#loginUser{
+  display: none;
+  border-radius: 5px;
+  background: pink;
+  text-align: center;
+  padding: 4px 0;
+  margin-right: 3px;
+  color: white;
+  width: 10vw;
+}
+.login-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.login-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 300px;
+    background-color: #f0efef;
+    border-radius: 5px;
+}
+.close-btn {
+    cursor: pointer;
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+}
+.close-btn:hover {
+    color: black;
+}
+#saveForm{
+	display: none;
+}
+.welcomePage{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+	justify-content: center;
+	height: 92vh;
+	background: #f0f0f0;
+	transition: all 2s ease;
+}
+.welcomePage h1{
+	width: 100%;
+	text-justify: center;
+	justify-content: center;
+}
+.playground{
+    display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 92vh;
+	background: #f0f0f0;
+}
+
+.quizContainer{
+	display:flex;
+	flex-wrap: wrap;
+	min-width: 200px;
+	margin: 20px;
+	align-items: start;
+	text-align: center;
+	justify-content: center;
+	border-radius: 5px;
+	background: #c0c0c0;
+	width: 25vw;
+	height: 25vh;
+	overflow: hidden;
+	transition: width 0.5s, height 0.5s;
+}
+.quizContainer h1{
+	width: 100%;
+}
+.startButton {
+      display: none;
+      margin: 2vw;
+    }
+.active {
+      width: 90vw !important;
+      height: 90vh !important;
+}
+.active .startButton {
+      display: block;
+}
+
+.askSaveButton{
+	display: none;
+	width: 100%;
+	justify-content: center;
+	margin-top: 20px;
+	background: orange;
+}
+.askSaveButton:hover{
+	transform: scale(1.1);
+}
+.quizContent{
+	display: none;
+	margin: 10px;
+    width: 100%;
+}
+.questionNum{
+	width: 100%;
+	text-align: center;
+}
+.questionContent{
+	width: 90%;
+	padding: 10px;
+	color: darkblue;
+	text-align: center;
+    margin-bottom: 30px;
+}
+.score{
+	float: right;
+	color: black;
+	font-weight: bold;
+	margin: 2vw;
+}
+
+button{
+	border-radius: 4px;
+	background: #5859f0;
+	padding: 2px;
+}
