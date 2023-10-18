@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+	display: flex;
+	width: 100%;
+	height: 10vh;
+	background-color: #202020;
+	align-items: center;
+	justify-content: center;
+}
+.scoreboard{
+	justify-content: center;
+	margin-top: 14px;
+	color: white;
+	font-size: 1.3rem;
+	text-align: center;
+	height: 90%;
+}
+.playground{
+	display: flex;
+	flex-wrap: wrap;
+	height: 90vh;
+}
+.balloon {
+  display:none;
+  width:120px;
+  height:145px;
+  background:hsl(015,100%,75%);
+  border-radius:80%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 30px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
+}
+
+.land, .pond{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #baaa99;
+	min-width: 250px;
+	width: 40vw;
+
+}
+.pond{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4488e0;
+  flex-grow: 1;/* This makes the .pond div take up the remaining space */
+}
+.frog, .lilypadGreen ,.lilypad{
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+  margin:5px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("assets/frog-green.svg");
+}
+.frog{
+	postion: absolute;
+	top:0;
+	left:0;
+}
+
+.lilypad:nth-child(3), .lilypad:nth-child(7){
+	background-image: url("assets/lilypad-green.svg");
+}
+.lilypad:nth-child(1), .lilypad:nth-child(5){
+	background-image: url("assets/lilypad-green.svg");
+}
+.lilypad:nth-child(9), .lilypad:nth-child(10){
+	background-image: url("assets/lilypad-green.svg");
+}
+.lilypad{
+	position: relative;
+	width: 22vh;
+	height: 22vh;
+	margin:10px;
+	font-size: 1.3rem;
+	background-image: url("assets/lilypad.svg");
+}
+
+.displayWord{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  text-align: center;
+}
+.displayNum{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  text-align: center;
+}
+.rotate{
+	transform: rotate(45deg);
+}
+.antiRotate{
+	transform: rotate(-45deg);
+}
+
+
+/* Styles for screens with a maximum width of 500px */
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 10vh;
+  }
+.playground{
+	height: 90vh;
+}
+.land, .pond{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #baaa99;
+	width: 100vw;
+	height: 45%;
+}
+
+.frog, .lilypadGreen ,.lilypad{
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+  margin:5px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("assets/frog-green.svg");
+}
+.frog{
+	postion: absolute;
+	top:0;
+	left:0;
+}
+
+.lilypad:nth-child(3), .lilypad:nth-child(7){
+	background-image: url("assets/lilypad-green.svg");
+}
+.lilypad{
+	position: relative;
+	width: 16vh;
+	height: 16vh;
+	margin:7px;
+	font-size: 1rem;
+	background-image: url("assets/lilypad.svg");
+}
+.pond{
+	background-color: #4488e0;
+  width: 100vw;
+  min-height: 55%;
+}
+}
