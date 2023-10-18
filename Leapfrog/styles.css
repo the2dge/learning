@@ -143,8 +143,8 @@
 
 .frog, .lilypadGreen ,.lilypad{
   position: relative;
-  width: 20vh;
-  height: 20vh;
+  width: 16vw;
+  height: 16vw;
   margin:5px;
   background-position: center center;
   background-size: contain;
@@ -162,8 +162,8 @@
 }
 .lilypad{
 	position: relative;
-	width: 16vh;
-	height: 16vh;
+	width: 16vw;
+	height: 16vw;
 	margin:7px;
 	font-size: 1rem;
 	background-image: url("assets/lilypad.svg");
